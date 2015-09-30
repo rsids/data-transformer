@@ -1,0 +1,15 @@
+{
+  "name": "data-transformer",
+  "version": "1.0.0",
+  "description": "Transforms the contents of a file via a callback",
+  "main": "data-transformer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.rabobank.nl/scm/~klijnsmi/data-transformer.git"
+  },
+  "author": "Ids Klijnsma",
+  "license": "ISC"
+}
