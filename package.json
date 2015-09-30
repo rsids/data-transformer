@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://git.rabobank.nl/scm/~klijnsmi/data-transformer.git"
+    "url": "https://github.com/rsids/data-transformer.git"
   },
   "author": "Ids Klijnsma",
   "license": "ISC"
