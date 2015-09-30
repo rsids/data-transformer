@@ -1,6 +1,6 @@
 {
   "name": "data-transformer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Transforms the contents of a file via a callback",
   "main": "data-transformer.js",
   "scripts": {
