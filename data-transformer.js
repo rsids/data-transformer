@@ -1,5 +1,4 @@
-var fs = require('fs'),
-    path = require('path');
+var fs = require('fs');
 
 function dataTransformer(options) {
     'use strict';
