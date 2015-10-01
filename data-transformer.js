@@ -5,12 +5,20 @@ function dataTransformer(options) {
 
     options.src = addSlash(options.src);
     options.dest = addSlash(options.dest);
-    var src = getSourceFiles('');
 
+    if(!options.hasOwnProperty('callback')) {
+        options.callback = function() {
+            console.log('Done!');
+        };
+    }
+
+    var src = getSourceFiles(''),
+        numSaved = 0;
 
     src.forEach(function (file) {
         fs.readFile(file, 'utf8', function (err, data) {
             if (err) {
+                console.log('Cannot read file');
                 throw err;
             }
 
@@ -60,7 +68,11 @@ function dataTransformer(options) {
             }
         });
 
-        fs.writeFile(fullpath + filename, obj.data, 'utf8');
+        fs.writeFile(fullpath + filename, obj.data, 'utf8', function() {
+            if(++numSaved === src.length) {
+                options.callback();
+            }
+        });
     }
 
     /**
